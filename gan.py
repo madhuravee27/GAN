@@ -187,7 +187,7 @@ tf.summary.scalar(name = 'Generator loss', tensor = g_Fake_loss)
 tf.summary.scalar(name = 'Discriminator real loss', tensor = d_Real_loss)
 tf.summary.scalar(name = 'Discriminator fake loss', tensor = d_Fake_loss)
 tensorboard_generated_images = generator(ip_g, batch_size)
-tf.summary.image(name = 'Generated images', tensor = tensorboard_generated_images)
+tf.summary.image(name = 'Generated images', tensor = tensorboard_generated_images, 5)
 merged_data = tf.summary.merge_all()
 logdir = 'tensorboard/'+str(datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))+'/'
 writer = tf.summary.FileWriter(logdir, sess.graph)
