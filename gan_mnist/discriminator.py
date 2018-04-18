@@ -41,6 +41,6 @@ def discriminator(image, reuse = False):
 		discriminator_bias4 = tf.get_variable('discriminator_bias4', shape = [1], initializer = tf.constant_initializer(0))
 
 		fc2_output = tf.matmul(fc2_input,discriminator_weight4) + discriminator_bias4
-		fc2_output = tf.nn.sigmoid(fc2_output)
+		#fc2_output = tf.nn.sigmoid(fc2_output)
 		return fc2_output
 
